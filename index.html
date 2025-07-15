@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Chúc mừng sinh nhật Mai Phương ♋</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif; /* Áp dụng font chung cho tất cả */
+        }
+        
+        body {
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #da70d6, #ff69b4);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            animation: heartFloat 8s ease-in-out infinite;
+        }
+        
+        .heart:nth-child(1) { color: #ff69b4; left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { color: #ff1493; left: 20%; animation-delay: 1s; }
+        .heart:nth-child(3) { color: #da70d6; left: 30%; animation-delay: 2s; }
+        .heart:nth-child(4) { color: #ff69b4; left: 40%; animation-delay: 3s; }
+        .heart:nth-child(5) { color: #ff1493; left: 50%; animation-delay: 4s; }
+        .heart:nth-child(6) { color: #da70d6; left: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { color: #ff69b4; left: 70%; animation-delay: 6s; }
+        .heart:nth-child(8) { color: #ff1493; left: 80%; animation-delay: 7s; }
+        .heart:nth-child(9) { color: #da70d6; left: 90%; animation-delay: 8s; }
+        
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(100vh) rotate(0deg) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            50% { transform: translateY(-50vh) rotate(180deg) scale(1.2); }
+        }
+        
+        .main-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,182,193,0.9));
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 
+                0 30px 80px rgba(255, 105, 180, 0.4),
+                0 0 0 2px rgba(255, 105, 180, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 4px solid transparent;
+            background-clip: padding-box;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            width: 100%;
+            animation: cardPulse 4s ease-in-out infinite;
+            overflow: hidden;
+        }
+        
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 105, 180, 0.1), transparent);
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        @keyframes cardPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 30px 80px rgba(255, 105, 180, 0.4);
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 40px 100px rgba(255, 105, 180, 0.6);
+            }
+        }
+        
+        .zodiac-section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .zodiac-icon {
+            font-size: 80px;
+            color: #ff1493;
+            margin-bottom: 10px;
+            animation: zodiacSpin 6s linear infinite;
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+        }
+        
+        @keyframes zodiacSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.1); }
+            50% { transform: rotate(180deg) scale(1); }
+            75% { transform: rotate(270deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .zodiac-text {
+            font-size: 24px;
+            color: #c2185b;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .main-title {
+            font-size: 56px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4, #da70d6, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: titleGlow 3s ease-in-out infinite;
+            font-weight: 700;
+        }
+        
+        @keyframes titleGlow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 20, 147, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.8)); }
+        }
+        
+        .name {
+            font-size: 68px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4, #da70d6, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 25px 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            animation: nameRainbow 4s ease-in-out infinite;
+            position: relative;
+            font-weight: 700;
+        }
+        
+        .name::after {
+            content: '💖';
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            font-size: 30px;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        @keyframes nameRainbow {
+            0%, 100% { 
+                background: linear-gradient(45deg, #ff1493, #ff69b4, #da70d6, #ff1493);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            50% { 
+                background: linear-gradient(45deg, #da70d6, #ff1493, #ff69b4, #da70d6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+        
+        .date-section {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border-radius: 25px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .date-section::before {
+            content: '🎂✨🎉✨🎂';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            animation: sparkleMove 3s linear infinite;
+        }
+        
+        @keyframes sparkleMove {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .date {
+            font-size: 32px;
+            color: white;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+        
+        .cake-container {
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .cake {
+            font-size: 100px;
+            animation: cakeBounce 2s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .cake::after {
+            content: '🎊🎉🎊';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            animation: confetti 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes cakeBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(-5deg); }
+            75% { transform: translateY(-15px) rotate(5deg); }
+        }
+        
+        @keyframes confetti {
+            0%, 100% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1); }
+        }
+        
+        .main-message {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: left;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 245, 0.9));
+            padding: 30px;
+            border-radius: 25px;
+            border-left: 5px solid #ff69b4;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493, #da70d6);
+            animation: lineShine 2s ease-in-out infinite;
+        }
+        
+        @keyframes lineShine {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .message-intro {
+            font-size: 20px;
+            color: #ad1457;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .message p {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 35px;
+            font-size: 17px;
+        }
+        
+        .message p::before {
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+        }
+        
+        .message p:nth-child(1)::before { content: '💖'; }
+        .message p:nth-child(2)::before { content: '🌸'; }
+        .message p:nth-child(3)::before { content: '🎁'; }
+        .message p:nth-child(4)::before { content: '💝'; }
+        .message p:nth-child(5)::before { content: '🌟'; }
+        .message p:nth-child(6)::before { content: '💕'; }
+        .message p:nth-child(7)::before { content: '🎀'; }
+        
+        .special-message {
+            font-style: italic;
+            color: #c2185b;
+            font-weight: 600;
+            border: 2px dashed #ff69b4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            background: rgba(255, 105, 180, 0.1);
+            position: relative;
+        }
+        
+        .special-message::before {
+            content: '💌';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: white;
+            padding: 0 5px;
+            font-size: 20px;
+        }
+        
+        .crab-traits {
+            background: linear-gradient(135deg, #ff69b4, #ff1493, #da70d6);
+            border-radius: 25px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .crab-traits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: slideShine 3s linear infinite;
+        }
+        
+        @keyframes slideShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .trait-title {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .trait-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            text-align: left;
+        }
+        
+        .trait-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 18px 22px;
+            border-radius: 20px;
+            color: #ad1457;
+            font-weight: 600;
+            font-size: 16px;
+            border-left: 5px solid #ff69b4;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trait-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+        }
+        
+        .wishes-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 245, 0.9));
+            border-radius: 25px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            border: 2px solid #ff69b4;
+        }
+        
+        .wishes-title {
+            font-size: 28px;
+            color: #ad1457;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .wish-item {
+            background: rgba(255, 105, 180, 0.1);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            border-left: 4px solid #ff69b4;
+            font-size: 16px;
+            color: #666;
+            position: relative;
+        }
+        
+        .wish-item::before {
+            content: '🌟';
+            position: absolute;
+            left: -12px;
+            top: 15px;
+            background: white;
+            padding: 2px;
+            border-radius: 50%;
+        }
+        
+        .wish-button {
+            background: linear-gradient(135deg, #ff1493, #ff69b4, #da70d6);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.4);
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wish-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .wish-button:hover::before {
+            left: 100%;
+        }
+        
+        .wish-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 20, 147, 0.6);
+        }
+        
+        .fireworks {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+        
+        .sparkle {
+            position: absolute;
+            font-size: 20px;
+            animation: sparkleAnim 2s linear infinite;
+        }
+        
+        @keyframes sparkleAnim {
+            0% { opacity: 1; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        }
+        
+        .music-note {
+            position: absolute;
+            font-size: 24px;
+            color: #ff69b4;
+            animation: musicFloat 5s ease-in-out infinite;
+        }
+        
+        @keyframes musicFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-40px) rotate(180deg); opacity: 1; }
+        }
+        
+        .footer {
+            font-size: 28px;
+            color: #ad1457;
+            margin-top: 35px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 240, 245, 0.8));
+            padding: 20px 30px;
+            border-radius: 20px;
+            border: 3px solid #ff69b4;
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.1), transparent);
+            animation: footerShine 4s linear infinite;
+        }
+        
+        @keyframes footerShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .corner-hearts {
+            position: fixed;
+            font-size: 35px;
+            color: #ff69b4;
+            animation: cornerPulse 3s ease-in-out infinite;
+            z-index: 2;
+        }
+        
+        .corner-hearts.top-left { top: 20px; left: 20px; }
+        .corner-hearts.top-right { top: 20px; right: 20px; }
+        .corner-hearts.bottom-left { bottom: 20px; left: 20px; }
+        .corner-hearts.bottom-right { bottom: 20px; right: 20px; }
+        
+        @keyframes cornerPulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        .click-effect {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            font-size: 30px;
+            animation: clickHeart 1s ease-out forwards;
+        }
+        
+        @keyframes clickHeart {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1.5) rotate(360deg); opacity: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            .main-card {
+                padding: 40px 25px;
+                margin: 20px;
+            }
+            
+            .main-title {
+                font-size: 42px;
+            }
+            
+            .name {
+                font-size: 52px;
+            }
+            
+            .main-message {
+                font-size: 16px;
+                padding: 25px;
+            }
+            
+            .trait-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .zodiac-icon {
+                font-size: 60px;
+            }
+            
+            .cake {
+                font-size: 80px;
+            }
+            
+            .footer {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">💝</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">💓</div>
+        <div class="heart">💖</div>
+        <div class="heart">💝</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+    </div>
+    
+    <div class="corner-hearts top-left">💖</div>
+    <div class="corner-hearts top-right">💝</div>
+    <div class="corner-hearts bottom-left">💕</div>
+    <div class="corner-hearts bottom-right">💗</div>
+    
+    <div class="fireworks"></div>
+    
+    <div class="container">
+        <div class="main-card">
+            <div class="zodiac-section">
+                <div class="zodiac-icon">♋</div>
+                <div class="zodiac-text">Người con gái dịu dànggg</div>
+            </div>
+            
+            <h1 class="main-title">Chúc mừng sinh nhật</h1>
+            <h2 class="name">Mai Phương</h2>
+            
+            <div class="date-section">
+                <div class="date">✨ 18 tháng 7 ✨</div>
+            </div>
+            
+            <div class="cake-container">
+                <div class="cake">🎂</div>
+            </div>
+            
+            <div class="main-message">
+                <div class="message-intro">💌 Lời chúc từ trái tim của tuiiiii</div>
+                <div class="message">
+                    <p>Chúc mừng sinh nhật bà – người đặc biệt nhất với tui.</p>
+                    <p>Tui không biết nói lời hoa mỹ, nhưng tui chỉ muốn bà biết tui thật sự trân trọng, yêu quý và thương bà rất nhiều:D.</p>
+                    <p>Tuổi mới mong bà luôn vui vẻ, khỏe mạnh, mọi ước mơ đều thành hiện thực.</p>
+                    <p>Tui muốn cùng bà đi qua hết những chặng đường sắp tới, cùng cố gắng, cùng chia sẻ và cùng mơ về một tương lai có nhau:>.</p>
+                    <p>Cảm ơn bà vì đã ở bên tui:>>.</p>
+                    <p>Sinh nhật vui vẻ nha, cô gái của tuiiiiiiiii.</p>
+                </div>
+                
+                <div class="special-message">
+                    Là người đàn bà nghị lực, bà luôn tràn đầy tình yêu thương, sự quan tâm và trái tim ấm áp như mặt trời. Mong bà sẽ luôn giữ được nụ cười tươi tắn và ánh mắt long lanh như những vì sao 🥰🥰
+                </div>
+            </div>
+            
+            <div class="wishes-section">
+                <div class="wishes-title">🎁 Những điều tui mong ước cho bà</div>
+                <div class="wish-item">Sức khỏe dồi dào, tinh thần luôn tươi tắn</div>
+                <div class="wish-item">Thành công rực rỡ trong mọi việc bà làm</div>
+                <div class="wish-item">Hạnh phúc chan chứa bên những người thương yêu</div>
+                <div class="wish-item">Mỗi ngày đều có những điều tuyệt vời đến với bà</div>
+                <div class="wish-item">Tình yêu của tui dành cho bà sẽ mãi không phai</div>
+            </div>
+            
+            <div class="crab-traits">
+                <div class="trait-title">💖 Những điều tui thương nhất ở bà</div>
+                <div class="trait-list">
+                    <div class="trait-item">😊 Bà cười siêu cấp dễ thương đáng yêu luôn nè</div>
+                    <div class="trait-item">🌸 Mùi bà thơm dễ chịu lắm luôn á trời</div>
+                    <div class="trait-item">🤗 Biết cách dỗ dành tui nữa nè</div>
+                    <div class="trait-item">😇 Ấm áp và ngoan lắm lun á </div>
+                    <div class="trait-item">😳 Người hay ngại nhưng ngại vể thương</div>
+                    <div class="trait-item">🎵 Nói chiện nghe mát lỗ tai lắm luôn á🥰</div>
+                    <div class="trait-item">😤 Lâu lâu má quạo nhưng quạo nhìn cưng lắm</div>
+                    <div class="trait-item">😏 Quan tâm người ta mà toàn giả bộ lơ lơ à</div>
+                    <div class="trait-item">😠 Thương người ta mà làm bộ hung dữ quài</div>
+                    <div class="trait-item">😾 Giận thì giận chứ vẫn lo cho người ta đủ thứ à</div>
+                    <div class="trait-item">💕 Trên mạng cái mồm lua lua trẻ trâu lắm , còn ở ngoài như em pé luôn á má🥰</div>
+                    <div class="trait-item">😍 Người gì đâu càng tiếp xúc gần càng thấy dễ thương , tinh tế á trời </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                💕 Với tất cả tình yêu từ người yêu bà nhất trên đời , tui chúc bà tuổi mới vui vẻeeeee . Yêu bà nhìu nhìu 💕
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            const heartSymbols = ['💖', '💝', '💕', '💗', '💓', '💘', '💞', '💟'];
+            heart.className = 'heart';
+            heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            heart.style.left = Math.random() * 100 + '%';
